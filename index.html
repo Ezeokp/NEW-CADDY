@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Caddy - Empowering Women's Health</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Caddy</h1>
+  <!-- Header -->
+  <header id="header">
+    <div class="container header-container">
+      <h1 class="logo">Caddy</h1>
       <nav>
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
@@ -21,46 +22,55 @@
       </nav>
     </div>
   </header>
-  
-  <main>
-    <section class="hero">
-      <div class="container">
-        <!-- IMAGE: Empowering Women (highlighted in orange) -->
-        <img src="https://source.unsplash.com/1100x400/?women,health,empowerment" alt="Empowering Women" class="hero-img highlight-img">
-        <h2>Empowering Women Through Innovation</h2>
-        <p>Discover Caddy – a comprehensive solution combining a stylish, modular healthcare kit with a digital platform for personalized guidance and community support.</p>
-        <a href="about.html" class="btn">Learn More</a>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h2>Empowering Women Through Innovation</h2>
+      <p>Discover Caddy – a revolutionary healthcare kit integrated with digital guidance and a supportive community.</p>
+      <a href="about.html" class="btn">Learn More</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container features-grid">
+      <div class="feature">
+        <img src="https://picsum.photos/300/300?random=1" alt="Community Support" class="interactive-image">
+        <h3>Community Support</h3>
+        <p>Join a vibrant network of empowered women.</p>
       </div>
-    </section>
-    
-    <section class="features">
-      <div class="container">
-        <div class="feature">
-          <!-- IMAGE: Community Support -->
-          <img src="https://source.unsplash.com/300x300/?women,community" alt="Community Support" class="highlight-img">
-          <h3>Community Support</h3>
-          <p>Join a vibrant network of women empowering each other.</p>
-        </div>
-        <div class="feature">
-          <!-- IMAGE: Digital Empowerment -->
-          <img src="https://source.unsplash.com/300x300/?digital,technology" alt="Digital Empowerment" class="highlight-img">
-          <h3>Digital Empowerment</h3>
-          <p>Access personalized health tips and tracking tools at your fingertips.</p>
-        </div>
-        <div class="feature">
-          <!-- IMAGE: Sustainable Design -->
-          <img src="https://source.unsplash.com/300x300/?sustainable,design" alt="Sustainable Design" class="highlight-img">
-          <h3>Sustainable Design</h3>
-          <p>Eco-friendly materials and ethical production for a better future.</p>
-        </div>
+      <div class="feature">
+        <img src="https://picsum.photos/300/300?random=2" alt="Digital Empowerment" class="interactive-image">
+        <h3>Digital Empowerment</h3>
+        <p>Access personalized health tips and smart tracking tools.</p>
       </div>
-    </section>
-  </main>
-  
+      <div class="feature">
+        <img src="https://picsum.photos/300/300?random=3" alt="Sustainable Design" class="interactive-image">
+        <h3>Sustainable Design</h3>
+        <p>Eco-friendly materials with innovative style.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
     <div class="container">
       <p>&copy; 2025 Caddy. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- JS for Header Transition -->
+  <script>
+    window.addEventListener('scroll', function(){
+      const header = document.getElementById('header');
+      if(window.pageYOffset > 50){
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 </html>
